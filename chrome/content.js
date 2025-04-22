@@ -136,7 +136,7 @@
             fontWeight: '500',
             cursor: 'pointer',
             transition: 'all 0.2s ease',
-            marginLeft: '40px',
+            marginLeft: '54px',
           },
           { id: 'netflix-filter-panel' });
   
