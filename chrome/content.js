@@ -18,9 +18,23 @@
   
       const createToggleButton = () => {
         const btn = createElement('button', {
-          position: 'fixed', top: '60px', right: '20px', zIndex: '10000',
-          padding: '0.5rem 1rem', border: 'none', borderRadius: '20px',
-         backgroundColor: 'rgba(40, 40, 40, 0.8)', color: 'white', cursor: 'pointer', fontWeight: 'bold'
+            position: 'fixed',
+            top: '81px',
+            right: '47px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '10px 16px',
+            backgroundColor: 'rgba(229, 9, 20, 0.9)',
+            color: 'white',
+            border: 'none',
+            borderRadius: '6px',
+            fontSize: '14px',
+            fontWeight: '600',
+            cursor: 'pointer',
+            transition: 'all 0.2s ease',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)',
+            zIndex: '100',
         }, {
           id: 'netflix-filter-toggle', textContent: '⚙️ Filtros'
         });
@@ -76,8 +90,8 @@
         return section;
       };
   
-      const createListSection = () => {
-        const title = createElement('h4', { margin: '1rem', color: '#ffffff' }, {
+      const createListSection = (isModal) => {
+        const title = createElement(isModal ? 'h2' : 'h4', { marginTop: '1rem', color: '#ffffff',  marginBottom: '1.5rem'}, {
           textContent: '📝 Mis listas'
         });
         const lists = ['😢 Días tristes', '💪 Motivación', '🎉 Risas', '⏳ Retomar', '➕ Nueva lista'];
@@ -99,10 +113,18 @@
         const isModal = panelMode === 'modal';
         const panel = createElement('div', isModal
           ? {
-              position: 'fixed', top: '110px', right: '20px', zIndex: '10000',
-              backgroundColor: '#fff', padding: '1rem', borderRadius: '12px',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.1)', fontFamily: 'sans-serif',
-              width: '360px', color: '#000', display: 'none'
+              position: 'fixed', 
+              top: '130px', 
+              right: '43px', 
+              zIndex: '10000',
+              backgroundColor: 'rgba(20, 20, 20, 0.95)',
+              borderRadius: '8px',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5)',
+              backdropFilter: "blur(10px)",
+              overflow: 'hidden',
+              transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              padding: '25px 25px',
           }
           : {
             width: '90%',
@@ -121,11 +143,11 @@
           },
           { id: 'netflix-filter-panel' });
   
-        const title = createElement('h3', { marginBottom: '0.5rem', color: '#000' }, {
+        const title = createElement('h2', { marginBottom: '1.5rem', color: '#ffffff' }, {
           textContent: '🎬 Filtros Netflix'
         });
         const filters = createFilterSection();
-        const [listTitle, listSection] = createListSection();
+        const [listTitle, listSection] = createListSection(isModal);
   
         if (isModal) panel.appendChild(title);
         panel.appendChild(filters);
