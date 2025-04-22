@@ -1,76 +1,78 @@
+# 🎬 Netflix Filter Extension
 
-# 🎬 Netflix Filter Panel
-
-Una extensión de navegador que te permite **filtrar películas y series en Netflix** por estado: vistas, no vistas, favoritas y más. Diseñada como una interfaz flotante sencilla y eficiente, completamente hecha con **React + Vite**.
-
----
-
-## 🚀 Funcionalidades (versión MVP)
-- ✅ Popup React básico accesible desde el icono.
-- ✅ Estructura preparada para inyección en Netflix.
-- ⚙️ Preparado para guardar datos localmente (en próximos días).
+Una extensión de Chrome que simula funcionalidades de filtrado en la sección **Mi Lista** de Netflix. Esta extensión ofrece una experiencia visual que imita un sistema avanzado de filtrado y organización de contenido.
 
 ---
 
-## 🧠 Tecnologías utilizadas
-- [Vite](https://vitejs.dev/)
-- [React](https://reactjs.org/)
-- Manifest V3 para extensiones de Chrome/Edge
+## 🚀 Características principales
+
+✅ **Diseño moderno y responsivo** para filtros personalizados  
+⚙️ Modo fijo o modal (desplegable)  
+📂 Agrupación por listas personales
+🎭 Filtros mockeados por duración, género, valoración, estado de visualización, año, nuevas temporadas...
 
 ---
 
-## 🛠 Instalación para desarrollo
+## 🖼️ Vista previa
 
-1. Clona el repositorio:
-```bash
-git clone https://github.com/tu-usuario/netflix-extension.git
-cd netflix-extension
-```
+### 🌐 Filtros en modo fijo
 
-2. Instala dependencias:
-```bash
-npm install
-```
-
-3. Compila el proyecto:
-```bash
-npm run build
-```
-
-4. Carga la extensión en Chrome/Edge:
-- Ve a `chrome://extensions/`
-- Activa **Modo desarrollador**
-- Haz clic en **“Cargar descomprimida”**
-- Selecciona la carpeta `/dist`
+![Modo fijo](./assets/modo-fijo.png)
 
 ---
 
-## 📂 Estructura del proyecto
-```
-src/
-├── popup.jsx        → Popup React mostrado desde el icono
-├── inject.js        → Código inyectado directamente en Netflix (Día 2)
-├── background.js    → Service Worker para lógica en segundo plano
+### 📦 Filtros en modal
 
-public/
-└── icon.png         → Icono de la extensión
-
-popup.html           → HTML para el popup
-manifest.json        → Configuración de la extensión
-vite.config.js       → Configuración del build
-```
+![Modal abierto](./assets/modal-abierto.png)
 
 ---
 
-## 🧪 En desarrollo
-Próximas funciones:
-- Filtro dentro de Netflix
-- Marcar contenido automáticamente como visto
-- Estadísticas personales
-- Sincronización en la nube (Firebase o similar)
+### 🧩 Panel de opciones (Popup de extensión)
+
+![Popup de la extensión](./assets/popup-extensión.png)
+
+---
+
+## ⚙️ Modo de visualización
+
+Puedes elegir entre:
+
+- `🖼️ Modal`: aparece flotando al pulsar el botón "Filtros".
+- `📌 Fijo`: siempre visible en la parte superior de "Mi Lista".
 
 ---
 
 
-## 🧑‍💻 Autor
-Desarrollado por emepuchades — 2025
+## 🧪 Funcionalidades Mockeadas
+
+- El contenido no es modificado dinámicamente por filtros.
+- Los filtros cambian el aspecto y ocultan algunos elementos para simular una búsqueda.
+
+---
+
+
+## 🛠️ Instalación
+
+1. Clona el repositorio.
+2. Abre Chrome y entra en `chrome://extensions/`.
+3. Activa el **modo desarrollador**.
+4. Haz clic en `Cargar descomprimida` y selecciona la carpeta del proyecto.
+
+---
+
+## 📌 Nota final
+
+Este proyecto se ha desarrollado como práctica de diseño UI y arquitectura frontend de extensiones. Está completamente desconectado del backend de Netflix.
+
+---
+
+## 🧠 Autor
+
+Hecho por emepuchades .
+Netflix, si estás leyendo esto: **estoy lista para llevar esto a producción cuando tú quieras**. 😎
+
+---
+
+## 📄 Licencia
+
+MIT
