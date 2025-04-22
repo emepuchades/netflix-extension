@@ -3,26 +3,16 @@
     "name": "Netflix Filter Panel",
     "version": "1.0",
     "description": "Filtra series y películas vistas en Netflix",
-    "permissions": [
-      "storage",
-      "activeTab",
-      "scripting"
-    ],
-    "host_permissions": [
-      "https://www.netflix.com/*"
-    ],
+    "permissions": ["activeTab", "scripting", "storage"],
+    "host_permissions": ["https://www.netflix.com/*"],
     "action": {
       "default_popup": "popup.html"
-    },
-    "background": {
-      "service_worker": "background.js"
     },
     "content_scripts": [
       {
         "matches": ["https://www.netflix.com/*"],
-        "js": ["src/inject.js"],
+        "js": ["content.js"],
         "run_at": "document_idle"
       }
     ]
   }
-  
