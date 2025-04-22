@@ -1,5 +1,3 @@
-// === chrome/content.js ===
-
 (function () {
     chrome.storage.local.get('netflixPanelMode', (data) => {
       const panelMode = data.netflixPanelMode || 'always';
@@ -68,7 +66,6 @@
         });
         container.appendChild(select);
   
-        // Añadimos manejador de cambio para filtros en vivo
         select.addEventListener('change', () => {
           applySeenFilter();
         });
@@ -165,7 +162,8 @@
             document.body.insertBefore(panel, document.body.firstChild);
           }
         }
-  
+        if (isModal) panel.style.display = 'none';
+
         return panel;
       };
       const panel = createPanel();
