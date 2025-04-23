@@ -10,7 +10,7 @@
     },
     "content_scripts": [
       {
-        "matches": ["https://www.netflix.com/*"],
+        "matches": ["https://www.netflix.com/browse/my-list"],
         "js": ["content.js"],
         "run_at": "document_idle"
       }
