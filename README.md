@@ -15,11 +15,25 @@ Una extensión de Chrome que simula funcionalidades de filtrado en la sección *
 
 ## 🖼️ Vista previa
 
-### 🌐 Filtros en modo fijo
+## 🎨 Versiones disponibles
+
+| Versión | Descripción |
+|--------|-------------|
+| `main` | Diseño experimental|
+| `feature/netflix-native-style` | Diseño más integrado con el estilo visual original de Netflix
+
+---
+
+## 📸 Vista previa
+
+### Estilo integrado (rama `feature/netflix-native-style`):
+
+![Netflix Native Style Preview](./assets/netflix-style.png)
+
+### Estilo personalizado (rama `main`):
 
 ![Modo fijo](./assets/modo-fijo.png)
 
----
 
 ### 📦 Filtros en modal
 
